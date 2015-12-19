@@ -5,8 +5,8 @@
             [adzerk.bootlaces   :as bootlaces]
             [boot-semver.core   :as semver]))
 
-(boot/deftask prod
-  "Build project for development to clojars."
+(boot/deftask deploy
+  "Build project for deployment to clojars."
   []
   (comp
    (semver/version :minor 'inc)
@@ -19,6 +19,6 @@
   []
   (comp
    (task/watch)
-   (semver/version)
+   (semver/version :pre-release 'semver/snapshot)
    (hoplon/hoplon :manifest true)
    (bootlaces/build-jar)))
