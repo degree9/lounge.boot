@@ -8,6 +8,7 @@
 
 (require
  '[adzerk.bootlaces :refer :all]
+ '[lounge.boot      :refer :all]
  '[boot-semver.core :refer :all])
 
 (task-options!
@@ -15,19 +16,3 @@
       :description ""
       :url         ""
       :scm {:url ""}})
-
-(deftask dev
-  "Build lounge.boot for development."
-  []
-  (comp
-   (watch)
-   (version)
-   (build-jar)))
-
-(deftask prod
-  "Build lounge.boot for development to clojars."
-  []
-  (comp
-   (version :minor 'inc)
-   (build-jar)
-   (push-release)))
