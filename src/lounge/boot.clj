@@ -19,6 +19,6 @@
   []
   (comp
    (task/watch)
-   (semver/version :pre-release 'semver/snapshot)
+   (semver/version :pre-release 'snapshot)
    (hoplon/hoplon :manifest true)
    (bootlaces/build-jar)))
