@@ -10,7 +10,7 @@
   []
   (comp
    (semver/version :minor 'inc)
-   (hoplon/hoplon :manifest true)
+   (hoplon/hoplon  :manifest true)
    (bootlaces/build-jar)
    (bootlaces/push-release)))
 
@@ -19,6 +19,8 @@
   []
   (comp
    (task/watch)
-   (semver/version :pre-release 'snapshot)
-   (hoplon/hoplon :manifest true)
+   (semver/version :no-update true
+                   :minor 'inc
+                   :pre-release 'snapshot)
+   (hoplon/hoplon  :manifest true)
    (bootlaces/build-jar)))
