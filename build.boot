@@ -3,7 +3,7 @@
                   [boot/core           "2.4.2"]
                   [adzerk/bootlaces    "0.1.13"]
                   [hoplon/boot-hoplon  "0.1.10"]
-                  [degree9/boot-semver "1.1.0"]]
+                  [degree9/boot-semver "1.2.0"]]
  :resource-paths   #{"src"})
 
 (require
