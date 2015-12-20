@@ -21,6 +21,7 @@
    (task/watch)
    (semver/version :no-update true
                    :minor 'inc
+                   :patch 'zero
                    :pre-release 'snapshot)
    (hoplon/hoplon  :manifest true)
    (bootlaces/build-jar)))
